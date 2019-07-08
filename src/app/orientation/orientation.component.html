@@ -1,3 +1,27 @@
-<p>
-  orientation works!
-</p>
+<form class="form">
+  <h3>Professor</h3>
+
+  <mat-form-field class="content">
+    <input matInput placeholder="Nome da Orientação" [(ngModel)]="orientationName" name="orientationName" required>
+  </mat-form-field>
+
+  <mat-form-field class="content">
+    <mat-label>Professor</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let teacher of teachers" [value]="teacher" (click)="selectTeacher(teacher)">
+        {{teacher.nome}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="content">
+    <mat-label>Aluno</mat-label>
+    <mat-select (required)="true">
+      <mat-option *ngFor="let student of students" [value]="student" (click)="selectStudent(student)">
+        {{student.nome}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-flat-button color="primary" (click)="save()">Salvar</button>
+</form>

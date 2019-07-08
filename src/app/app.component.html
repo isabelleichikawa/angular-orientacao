@@ -2,12 +2,15 @@
   <mat-toolbar-row>
     <span>Projeto Orientação</span>
     <span class="spacer"></span>
-    <a mat-button routerLink="teachers">Profesores</a>
-    <a mat-button routerLink="students">Alunos</a>
-    <a mat-button >Sair</a>
+    <a mat-button routerLink="home">Início</a>
+    <button mat-button [matMenuTriggerFor]="menu">Cadastrar</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="teachers">Profesor</button>
+      <button mat-menu-item routerLink="students">Aluno</button>
+      <button mat-menu-item routerLink="orientations">Orientação</button>
+    </mat-menu>
+    <a mat-button (click)="logout()">Sair</a>
   </mat-toolbar-row>
 </mat-toolbar>
-
-<!-- <h2>Orientações</h2> -->
 
 <router-outlet></router-outlet>

@@ -1,3 +1,13 @@
-<p>
-  student works!
-</p>
+<form class="form">
+  <h3>Aluno</h3>
+
+  <mat-form-field class="content">
+    <input matInput placeholder="Nome" [(ngModel)]="name" name="name" required>
+  </mat-form-field>
+
+  <mat-form-field class="content">
+    <input matInput placeholder="RA" type="number" [(ngModel)]="ra" name="ra" required>
+  </mat-form-field>
+
+  <button mat-flat-button color="primary" (click)="save()">Salvar</button>
+</form>

@@ -7,6 +7,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSnackBarModule } from '@angular/material';
+import { MatListModule } from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { TeacherComponent } from './teacher/teacher.component';
@@ -14,6 +19,7 @@ import { StudentComponent } from './student/student.component';
 import { OrientationComponent } from './orientation/orientation.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -22,7 +28,8 @@ import { AppRoutingModule } from './app-routing.module';
     TeacherComponent,
     StudentComponent,
     OrientationComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +43,11 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     MatFormFieldModule,
     ReactiveFormsModule,
+    MatMenuModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatSnackBarModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
